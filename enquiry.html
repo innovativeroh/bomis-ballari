@@ -24,8 +24,6 @@
 
     input:focus, select:focus, textarea:focus {
       outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(226, 93, 42, 0.1);
     }
 
     .form-card {
@@ -36,12 +34,34 @@
     
     .input-field {
       width: 100%;
-      background: #f8f8f8;
-      border: 2px solid transparent;
-      border-radius: 16px;
-      padding: 14px 20px;
-      transition: all 0.3s ease;
-      font-size: 15px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 12px 16px;
+      transition: all 0.2s ease;
+      font-size: 14px;
+      color: #1a1a1a;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
+    }
+
+    .input-field::placeholder {
+      color: #9ca3af;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(226, 93, 42, 0.05);
+    }
+
+    select.input-field {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23e25d2a' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 14px;
+      padding-right: 40px;
     }
 
     .scroll-reveal {
@@ -55,6 +75,23 @@
     }
   </style>
   <link rel="stylesheet" href="responsive.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1326532412666083');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1326532412666083&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -98,54 +135,52 @@
             <input type="hidden" name="form_type" value="enquiry">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <!-- Parent Name -->
-              <div class="space-y-2">
-                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Parent's Full Name</label>
+              <div class="space-y-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Parent Name</label>
                 <input type="text" name="parent_name" placeholder="John Doe" class="input-field" required>
               </div>
               <!-- Child Name -->
-              <div class="space-y-2">
-                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Child's Full Name</label>
+              <div class="space-y-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Student Name</label>
                 <input type="text" name="child_name" placeholder="Jane Doe" class="input-field" required>
               </div>
-              <!-- Child Age -->
-              <div class="space-y-2">
-                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Child's Age</label>
-                <select name="child_age" class="input-field cursor-pointer" required>
-                  <option value="" disabled selected>Select Age</option>
-                  <option>1.5 - 2 Years</option>
-                  <option>2 - 3 Years</option>
-                  <option>3 - 4 Years</option>
-                  <option>4 - 5 Years</option>
-                  <option>5 - 6 Years</option>
-                  <option>6 - 10 Years</option>
-                  <option>10+ Years</option>
-                </select>
-              </div>
-              <!-- Program Interest -->
-              <div class="space-y-2">
-                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Program Interest</label>
+              <!-- Which class you need admission for -->
+              <div class="space-y-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Which class you need admission for</label>
                 <select name="program" class="input-field cursor-pointer" required>
-                  <option value="" disabled selected>Select Program</option>
-                  <option>Pre-School</option>
-                  <option>Primary School</option>
-                  <option>Middle School</option>
+                  <option value="" disabled selected>Select Class</option>
+                  <option>Nursery</option>
+                  <option>LKG</option>
+                  <option>UKG</option>
+                  <option>Class 1</option>
+                  <option>Class 2</option>
+                  <option>Class 3</option>
+                  <option>Class 4</option>
+                  <option>Class 5</option>
+                  <option>Class 6</option>
+                  <option>Class 7</option>
+                  <option>Class 8</option>
                 </select>
               </div>
               <!-- Phone -->
-              <div class="space-y-2">
-                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 00000 00000" class="input-field" required>
-              </div>
-              <!-- Email -->
-              <div class="space-y-2">
-                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Email Address</label>
-                <input type="email" name="email" placeholder="name@example.com" class="input-field" required>
+              <div class="space-y-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Phone</label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[14px] font-semibold text-[#1a1a1a]/40">+91</span>
+                  <input type="tel" name="phone" placeholder="00000 00000" class="input-field !pl-12" required pattern="[0-9]{10}">
+                </div>
               </div>
             </div>
 
+            <!-- Email -->
+            <div class="space-y-1.5">
+              <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Email Address</label>
+              <input type="email" name="email" placeholder="name@example.com" class="input-field" required>
+            </div>
+
             <!-- Message -->
-            <div class="space-y-2">
-              <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Message (Optional)</label>
+            <div class="space-y-1.5">
+              <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Message (Optional)</label>
               <textarea name="message" rows="3" placeholder="How can we help you?" class="input-field resize-none"></textarea>
             </div>
 
@@ -180,12 +215,8 @@
                 
                 if (result.status === 'success') {
                   form.reset();
-                  // Check if there is a global success message div to show
-                  const globalSuccess = document.getElementById('successMessage');
-                  if (globalSuccess) {
-                    form.classList.add('hidden');
-                    globalSuccess.classList.remove('hidden');
-                  }
+                  form.classList.add('hidden');
+                  document.getElementById('successMessage').classList.remove('hidden');
                 }
               } catch (error) {
                 responseDiv.classList.remove('hidden');
@@ -220,18 +251,6 @@
 
 
   <script>
-    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('button');
-      btn.disabled = true;
-      btn.innerHTML = 'Submitting...';
-      
-      setTimeout(() => {
-        this.classList.add('hidden');
-        document.getElementById('successMessage').classList.remove('hidden');
-      }, 1000);
-    });
-
     document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <svg class="w-5 h-5 text-[#e25d2a] mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.81 12.81 0 0 0 .62 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.62A2 2 0 0 1 22 16.92z"></path></svg>
               <div class="flex flex-col text-[#57534E] text-[15px] font-medium">
                 <a href="tel:+919035067072" class="hover:text-[#231F20] transition-colors">+91 9035067072</a>
-                <a href="tel:+919035076073" class="hover:text-[#231F20] transition-colors">9035076073</a>
+                <a href="tel:+919035076073" class="hover:text-[#231F20] transition-colors">+91 9035076073</a>
               </div>
             </div>
             <div class="flex items-start gap-3">

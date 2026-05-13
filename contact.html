@@ -69,9 +69,51 @@
       transform: none !important;
       filter: none !important;
     }
+
+    select.custom-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23e25d2a' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 14px;
+      padding-right: 40px;
+    }
+
+    .form-input {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 12px 16px;
+      transition: all 0.2s ease;
+      font-size: 14px;
+      color: #1a1a1a;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: #e25d2a;
+      box-shadow: 0 0 0 4px rgba(226, 93, 42, 0.05);
+    }
   </style>
   <script>document.documentElement.classList.remove('no-js');</script>
   <link rel="stylesheet" href="responsive.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1326532412666083');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1326532412666083&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body class="bg-[#F7F5F2] min-h-screen flex flex-col">
 
@@ -134,58 +176,69 @@
           
           <form id="contactForm" class="flex flex-col gap-6 text-left">
             <input type="hidden" name="form_type" value="contact">
-            <!-- Row 1: First Name | Last Name -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-2">
-                <label class="text-[13px] font-semibold text-[#555] ml-1">First Name *</label>
-                <input type="text" name="first_name" required placeholder="John" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              <!-- First Name -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">First Name</label>
+                <input type="text" name="first_name" required placeholder="John" class="form-input">
               </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-[13px] font-semibold text-[#555] ml-1">Last Name *</label>
-                <input type="text" name="last_name" required placeholder="Smith" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              <!-- Last Name -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Last Name</label>
+                <input type="text" name="last_name" required placeholder="Smith" class="form-input">
               </div>
-            </div>
-
-            <!-- Row 2: Email | Phone -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-2">
-                <label class="text-[13px] font-semibold text-[#555] ml-1">Email Address *</label>
-                <input type="email" name="email" required placeholder="john@example.com" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              <!-- Admission For -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Admission For</label>
+                <div class="relative">
+                  <select name="program" class="form-input appearance-none cursor-pointer custom-select w-full">
+                    <option selected disabled>Select Grade</option>
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+                    <option>Class 1</option>
+                    <option>Class 2</option>
+                    <option>Class 3</option>
+                    <option>Class 4</option>
+                    <option>Class 5</option>
+                    <option>Class 6</option>
+                    <option>Class 7</option>
+                    <option>Class 8</option>
+                  </select>
+                </div>
               </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-[13px] font-semibold text-[#555] ml-1">Phone Number *</label>
-                <input type="tel" name="phone" required placeholder="(415) 555-1234" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              <!-- Phone -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Phone</label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[14px] font-semibold text-[#111]/40">+91</span>
+                  <input type="tel" name="phone" required placeholder="00000 00000" class="form-input !pl-12" pattern="[0-9]{10}">
+                </div>
               </div>
-            </div>
-
-            <!-- Row 3: Child's Age | Program -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-2">
-                <label class="text-[13px] font-semibold text-[#555] ml-1">Child's Age</label>
-                <select name="child_age" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all text-[#888] appearance-none cursor-pointer">
-                  <option selected disabled>Select age</option>
-                  <option>1-2 Years</option>
-                  <option>2-3 Years</option>
-                  <option>3-5 Years</option>
-                  <option>5+ Years</option>
+              <!-- Email -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Email</label>
+                <input type="email" name="email" required placeholder="name@example.com" class="form-input">
+              </div>
+              <!-- Student Age -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Student Age</label>
+                <select name="child_age" class="form-input appearance-none cursor-pointer custom-select">
+                  <option selected disabled>Select Age</option>
+                  <option>1.5 - 2 Years</option>
+                  <option>2 - 3 Years</option>
+                  <option>3 - 4 Years</option>
+                  <option>4 - 5 Years</option>
+                  <option>5 - 6 Years</option>
+                  <option>6 - 10 Years</option>
+                  <option>10+ Years</option>
                 </select>
               </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-[13px] font-semibold text-[#555] ml-1">Program of Interest</label>
-                <select name="program" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all text-[#888] appearance-none cursor-pointer">
-                  <option selected disabled>Select program</option>
-                  <option>Toddler Program</option>
-                  <option>Preschool</option>
-                  <option>Kindergarten</option>
-                  <option>After School</option>
-                </select>
-              </div>
             </div>
 
-            <!-- Row 5: Message -->
-            <div class="flex flex-col gap-2">
-              <label class="text-[13px] font-semibold text-[#555] ml-1">Message</label>
-              <textarea name="message" placeholder="Tell us a bit about your child and what you're looking for..." rows="5" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888] resize-none"></textarea>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[12px] font-bold text-[#666] ml-1 uppercase tracking-wider">Message</label>
+              <textarea name="message" placeholder="Tell us a bit about your child..." rows="5" class="form-input resize-none"></textarea>
             </div>
 
             <!-- Button -->
