@@ -47,6 +47,7 @@
 </IfModule>
 
 <IfModule mod_rewrite.c>
+    Options -MultiViews
     RewriteEngine On
 
     # Rewrite blog.html to blog.php internally
