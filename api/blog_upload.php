@@ -77,14 +77,31 @@ if (!$mime || !isset($allowed[$mime])) {
 
 $upload_dir = __DIR__ . '/../uploads/blogs/';
 if (!is_dir($upload_dir)) {
-    @mkdir($upload_dir, 0755, true);
+    if (!@mkdir($upload_dir, 0755, true)) {
+        echo json_encode([
+            'success' => 0,
+            'message' => 'Upload directory does not exist and could not be created: ' . realpath(__DIR__ . '/..') . '/uploads/blogs/. Please check write permissions of the parent directory.'
+        ]);
+        exit();
+    }
+}
+
+if (!is_writable($upload_dir)) {
+    echo json_encode([
+        'success' => 0,
+        'message' => 'Upload directory is not writable: ' . realpath($upload_dir) . '. Please verify write permissions (chmod 755 or 777) on cPanel.'
+    ]);
+    exit();
 }
 
 $name = 'blog_' . date('Ymd_His') . '_' . bin2hex(random_bytes(4)) . '.' . $allowed[$mime];
 $dest = $upload_dir . $name;
 
 if (!@move_uploaded_file($file['tmp_name'], $dest)) {
-    echo json_encode(['success' => 0, 'message' => 'Failed to store file. Please check upload directory permissions.']);
+    echo json_encode([
+        'success' => 0,
+        'message' => 'Failed to move uploaded file to destination: ' . $dest . '. Please check temporary directory and upload folder permissions.'
+    ]);
     exit();
 }
 
