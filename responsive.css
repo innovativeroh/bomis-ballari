@@ -41,8 +41,8 @@ html, body {
     }
 
     /* Hero adjustments */
-    .pt-\[120px\] {
-        padding-top: 140px !important;
+    .pt-\[220px\], .pt-\[120px\] {
+        padding-top: 160px !important;
     }
 }
 
@@ -258,8 +258,8 @@ html, body {
         font-size: 28px !important;
     }
 
-    .pt-\[120px\] {
-        padding-top: 120px !important;
+    .pt-\[220px\], .pt-\[120px\] {
+        padding-top: 140px !important;
     }
     
     /* Ensure no horizontal scroll on very small screens - scoped to avoid breaking mobile menu */

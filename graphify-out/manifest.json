@@ -1,0 +1,227 @@
+{
+  "add_gtm.ps1": {
+    "mtime": 1783763115.4783254,
+    "ast_hash": "6dbb371e84856103cc16d5dee925fe33",
+    "semantic_hash": "6dbb371e84856103cc16d5dee925fe33"
+  },
+  "admin/contact_submissions.php": {
+    "mtime": 1778495088.8014297,
+    "ast_hash": "79acec6ef0882dee3d603971681a7ea0",
+    "semantic_hash": "79acec6ef0882dee3d603971681a7ea0"
+  },
+  "admin/dashboard.php": {
+    "mtime": 1778495070.4738374,
+    "ast_hash": "c21b779cce9d059749c4489451ed8952",
+    "semantic_hash": "c21b779cce9d059749c4489451ed8952"
+  },
+  "admin/enquiry_submissions.php": {
+    "mtime": 1778495080.4945688,
+    "ast_hash": "64a021d3cb9374a7f9371f01e0d738d0",
+    "semantic_hash": "64a021d3cb9374a7f9371f01e0d738d0"
+  },
+  "admin/logs.php": {
+    "mtime": 1778495107.6872933,
+    "ast_hash": "df87107d228644e0e8cd1fdf2994c368",
+    "semantic_hash": "df87107d228644e0e8cd1fdf2994c368"
+  },
+  "admin/profile.php": {
+    "mtime": 1778495123.252779,
+    "ast_hash": "80e04d1b7385bda8b862b4855382e967",
+    "semantic_hash": "80e04d1b7385bda8b862b4855382e967"
+  },
+  "admin/subscribers.php": {
+    "mtime": 1778495101.815519,
+    "ast_hash": "5ebe539f853dfe5b4609377973aa3955",
+    "semantic_hash": "5ebe539f853dfe5b4609377973aa3955"
+  },
+  "api/submit_form.php": {
+    "mtime": 1778495533.698953,
+    "ast_hash": "2e7b59b513ee88c00cd61376861eadeb",
+    "semantic_hash": "2e7b59b513ee88c00cd61376861eadeb"
+  },
+  "authentication/login.php": {
+    "mtime": 1778495459.53688,
+    "ast_hash": "522a837518213e5ebfcb237f207481db",
+    "semantic_hash": "522a837518213e5ebfcb237f207481db"
+  },
+  "authentication/logout.php": {
+    "mtime": 1778495050.0603416,
+    "ast_hash": "1406b0ff540e158525acba08ad732d51",
+    "semantic_hash": "1406b0ff540e158525acba08ad732d51"
+  },
+  "config/db.php": {
+    "mtime": 1778495445.2074826,
+    "ast_hash": "61ab769dc4cec6906f303795079f9ba5",
+    "semantic_hash": "61ab769dc4cec6906f303795079f9ba5"
+  },
+  "database/setup_db.php": {
+    "mtime": 1778495451.8160872,
+    "ast_hash": "387185c54d36e942f4f48524b9a7974d",
+    "semantic_hash": "387185c54d36e942f4f48524b9a7974d"
+  },
+  "footer.js": {
+    "mtime": 1783763116.258634,
+    "ast_hash": "4b673c165f8a7843ff37b52d5dd9559d",
+    "semantic_hash": "4b673c165f8a7843ff37b52d5dd9559d"
+  },
+  "header.js": {
+    "mtime": 1783763116.2591524,
+    "ast_hash": "b6e9a4854deb03ff30b1692825208f0e",
+    "semantic_hash": "b6e9a4854deb03ff30b1692825208f0e"
+  },
+  "includes/footer.php": {
+    "mtime": 1778495061.2794752,
+    "ast_hash": "8b6d518208487a04aeb4728ab930b21f",
+    "semantic_hash": "8b6d518208487a04aeb4728ab930b21f"
+  },
+  "includes/header.php": {
+    "mtime": 1778495053.6289701,
+    "ast_hash": "3d31a7a103ba5e284dd227beac2e79ae",
+    "semantic_hash": "3d31a7a103ba5e284dd227beac2e79ae"
+  },
+  "includes/sidebar.php": {
+    "mtime": 1778495127.153864,
+    "ast_hash": "61d278a00c7f7f7dc7458ae81a2aaed7",
+    "semantic_hash": "61d278a00c7f7f7dc7458ae81a2aaed7"
+  },
+  "about.html": {
+    "mtime": 1783763115.4782457,
+    "ast_hash": "92efb48dee5e525c4e42b4ab7f78bb84",
+    "semantic_hash": "92efb48dee5e525c4e42b4ab7f78bb84"
+  },
+  "assets/about us contant/about_us.md": {
+    "mtime": 1778157679.0410864,
+    "ast_hash": "959f19f1155a7c930a037a611ccdcdf1",
+    "semantic_hash": "959f19f1155a7c930a037a611ccdcdf1"
+  },
+  "assets/about us contant/preview.html": {
+    "mtime": 1783763115.478547,
+    "ast_hash": "a27c7d35718e2241dd98592b277d2ef9",
+    "semantic_hash": "a27c7d35718e2241dd98592b277d2ef9"
+  },
+  "assets/blogs/programs contant/Middle School/details.md": {
+    "mtime": 1778157679.0756595,
+    "ast_hash": "559d8806380c2b8263da093bf7acd962",
+    "semantic_hash": "559d8806380c2b8263da093bf7acd962"
+  },
+  "assets/blogs/programs contant/Pre School/details.md": {
+    "mtime": 1778157679.0772173,
+    "ast_hash": "edfe01bc19468b33249c5bdfe248b494",
+    "semantic_hash": "edfe01bc19468b33249c5bdfe248b494"
+  },
+  "assets/blogs/programs contant/Primary School/details.md": {
+    "mtime": 1778157679.0862408,
+    "ast_hash": "9eebe74675e8b054f07adb55212155a9",
+    "semantic_hash": "9eebe74675e8b054f07adb55212155a9"
+  },
+  "assets/blogs/programs contant/preview.html": {
+    "mtime": 1783763115.4786656,
+    "ast_hash": "ddef8cd353869eb66dea9bb75dfe0add",
+    "semantic_hash": "ddef8cd353869eb66dea9bb75dfe0add"
+  },
+  "assets/blogs/programs contant/programs.md": {
+    "mtime": 1778157679.0902798,
+    "ast_hash": "a77fa0cad7d05735c3a668acbb6b0792",
+    "semantic_hash": "a77fa0cad7d05735c3a668acbb6b0792"
+  },
+  "blog.html": {
+    "mtime": 1783763115.4788785,
+    "ast_hash": "952333eb29f7ba342d4262d7a89fc8f8",
+    "semantic_hash": "952333eb29f7ba342d4262d7a89fc8f8"
+  },
+  "blogs/building-leadership-skills-young-age.html": {
+    "mtime": 1783763115.478956,
+    "ast_hash": "dadae337671eea7adba7afb1da0c7014",
+    "semantic_hash": "dadae337671eea7adba7afb1da0c7014"
+  },
+  "blogs/cbse-school-ballari-investment.html": {
+    "mtime": 1783763115.4790874,
+    "ast_hash": "1f48e8fe5104ae9bcd60801f4c59c236",
+    "semantic_hash": "1f48e8fe5104ae9bcd60801f4c59c236"
+  },
+  "blogs/pre-school-admission-ballari.html": {
+    "mtime": 1783763115.479213,
+    "ast_hash": "83f5dddad4c6c7bbe0bab0f97e347e88",
+    "semantic_hash": "83f5dddad4c6c7bbe0bab0f97e347e88"
+  },
+  "blogs/smart-classrooms-sports-safety.html": {
+    "mtime": 1783763115.4793198,
+    "ast_hash": "621e4ae632cbb6def414027324509210",
+    "semantic_hash": "621e4ae632cbb6def414027324509210"
+  },
+  "contact.html": {
+    "mtime": 1783763116.2578692,
+    "ast_hash": "261c99f5e8f8e7cc8a148eb53dccc9bd",
+    "semantic_hash": "261c99f5e8f8e7cc8a148eb53dccc9bd"
+  },
+  "enquiry.html": {
+    "mtime": 1783763116.258479,
+    "ast_hash": "d2fad422996ff71d376c4088a46628c2",
+    "semantic_hash": "d2fad422996ff71d376c4088a46628c2"
+  },
+  "gallery.html": {
+    "mtime": 1783763116.2587326,
+    "ast_hash": "e3d70b1ddbf8c438993d15fa6922d7a6",
+    "semantic_hash": "e3d70b1ddbf8c438993d15fa6922d7a6"
+  },
+  "home contant/home.md": {
+    "mtime": 1778157679.7780125,
+    "ast_hash": "95ffaf5db4b849f0ae47b4d8ea70e052",
+    "semantic_hash": "95ffaf5db4b849f0ae47b4d8ea70e052"
+  },
+  "index.html": {
+    "mtime": 1783763116.259823,
+    "ast_hash": "0d33e5727e49075c68b320a898a160b0",
+    "semantic_hash": "0d33e5727e49075c68b320a898a160b0"
+  },
+  "parents-login.html": {
+    "mtime": 1783763116.2606676,
+    "ast_hash": "dfa0aac7bef1484d79f587f4ac77480b",
+    "semantic_hash": "dfa0aac7bef1484d79f587f4ac77480b"
+  },
+  "programs.html": {
+    "mtime": 1783763116.260788,
+    "ast_hash": "71671fd2a3b2aa3303a6c752b957e2ea",
+    "semantic_hash": "71671fd2a3b2aa3303a6c752b957e2ea"
+  },
+  "programs/middle-school.html": {
+    "mtime": 1783763116.2611074,
+    "ast_hash": "24126dfddfcf373da77d833b0255c71f",
+    "semantic_hash": "24126dfddfcf373da77d833b0255c71f"
+  },
+  "programs/pre-school.html": {
+    "mtime": 1783763116.2612293,
+    "ast_hash": "84e455bd6d265266781d6ecee8a6d298",
+    "semantic_hash": "84e455bd6d265266781d6ecee8a6d298"
+  },
+  "programs/primary-school.html": {
+    "mtime": 1783763116.2613394,
+    "ast_hash": "3c432f7f92b7f102f57b2fb0a943671b",
+    "semantic_hash": "3c432f7f92b7f102f57b2fb0a943671b"
+  },
+  "staff-login.html": {
+    "mtime": 1783763116.2614894,
+    "ast_hash": "598c9af2f2bfdb89b06f5a0e8960d6c5",
+    "semantic_hash": "598c9af2f2bfdb89b06f5a0e8960d6c5"
+  },
+  "testimonials.html": {
+    "mtime": 1783763116.2619348,
+    "ast_hash": "8234ec7e6e0c0384cc6cc9b0010fec4c",
+    "semantic_hash": "8234ec7e6e0c0384cc6cc9b0010fec4c"
+  },
+  "blogs/blog1-cbse-school-ballari.html_copy.pdf": {
+    "mtime": 1778157679.1333838,
+    "ast_hash": "b4ffe0e0a0bd0354de61ff8e6aca829b",
+    "semantic_hash": "b4ffe0e0a0bd0354de61ff8e6aca829b"
+  },
+  "blogs/blog2-preschool-admission-ballari.html_copy.pdf": {
+    "mtime": 1778157679.1341646,
+    "ast_hash": "6e879d2b3f609bd56a140eb8826054de",
+    "semantic_hash": "6e879d2b3f609bd56a140eb8826054de"
+  },
+  "blogs/blog3-best-school-ballari-holistic.html_copy.pdf": {
+    "mtime": 1778157679.1349723,
+    "ast_hash": "24fab833d9390c5d1306a99aa5e5966e",
+    "semantic_hash": "24fab833d9390c5d1306a99aa5e5966e"
+  }
+}

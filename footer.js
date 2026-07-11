@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><a href="${base}index.html" class="text-[#57534E] text-[15px] font-medium hover:text-[#231F20] transition-colors duration-200">Home</a></li>
             <li><a href="${base}about.html" class="text-[#57534E] text-[15px] font-medium hover:text-[#231F20] transition-colors duration-200">About Us</a></li>
             <li><a href="${base}programs.html" class="text-[#57534E] text-[15px] font-medium hover:text-[#231F20] transition-colors duration-200">Programs</a></li>
-            <li><a href="${base}blog.html" class="text-[#57534E] text-[15px] font-medium hover:text-[#231F20] transition-colors duration-200">Blogs</a></li>
+            <li><a href="${base}blog.php" class="text-[#57534E] text-[15px] font-medium hover:text-[#231F20] transition-colors duration-200">Blogs</a></li>
           </ul>
         </div>
 

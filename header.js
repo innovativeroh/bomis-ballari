@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isAbout = path.includes('about.html');
     const isPrograms = path.includes('programs.html') || path.includes('/programs/');
     const isGallery = path.includes('gallery.html');
-    const isBlogs = path.includes('blog.html') || path.includes('/blogs/');
+    const isBlogs = path.includes('blog.html') || path.includes('blog.php') || path.includes('post.php') || path.includes('/blogs/');
     const isEnquiry = path.includes('enquiry.html');
     const isParentsLogin = path.includes('parents-login.html');
     const isStaffLogin = path.includes('staff-login.html');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${base}programs.html" class="${isPrograms ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Programs</a>
                 <a href="${base}gallery.html" class="${isGallery ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Gallery</a>
                 <a href="${base}testimonials.html" class="${isTestimonials ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Testimonials</a>
-                <a href="${base}blog.html" class="${isBlogs ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Blogs</a>
+                <a href="${base}blog.php" class="${isBlogs ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Blogs</a>
                 <a href="${base}enquiry.html" class="${isEnquiry ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Enquiry</a>
                 
                 <!-- Login Dropdown -->
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${base}programs.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isPrograms ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Programs</a>
                 <a href="${base}gallery.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isGallery ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Gallery</a>
                 <a href="${base}testimonials.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isTestimonials ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Testimonials</a>
-                <a href="${base}blog.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isBlogs ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Blogs</a>
+                <a href="${base}blog.php" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isBlogs ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Blogs</a>
                 <a href="${base}contact.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 text-[#231F20] font-semibold text-[17px]">Contact Us</a>
                 <a href="${base}enquiry.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isEnquiry ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Enquiry</a>
                 <a href="${base}parents-login.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isParentsLogin ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Parents Login</a>

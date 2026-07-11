@@ -15,6 +15,10 @@
         <a href="subscribers.php" class="flex items-center gap-3 px-4 py-3 rounded-xl <?php echo basename($_SERVER['PHP_SELF']) == 'subscribers.php' ? 'bg-orange-50 text-orange-600' : 'text-gray-500 hover:bg-gray-50'; ?> font-medium transition-all">
             <i class="fas fa-users"></i> Newsletter
         </a>
+        <?php $blog_pages = ['blogs.php', 'blog_editor.php']; ?>
+        <a href="blogs.php" class="flex items-center gap-3 px-4 py-3 rounded-xl <?php echo in_array(basename($_SERVER['PHP_SELF']), $blog_pages) ? 'bg-orange-50 text-orange-600' : 'text-gray-500 hover:bg-gray-50'; ?> font-medium transition-all">
+            <i class="fas fa-newspaper"></i> Blogs
+        </a>
         <a href="logs.php" class="flex items-center gap-3 px-4 py-3 rounded-xl <?php echo basename($_SERVER['PHP_SELF']) == 'logs.php' ? 'bg-orange-50 text-orange-600' : 'text-gray-500 hover:bg-gray-50'; ?> font-medium transition-all">
             <i class="fas fa-history"></i> Activity Logs
         </a>
