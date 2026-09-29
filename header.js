@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Detect active page for nav links
     const isHome = path.endsWith('index.html') || path.endsWith('/');
-    const isAbout = path.includes('about.html');
+    const isMPD = path.includes('mandatory-public-disclosure.html');
+    const isAbout = path.includes('about.html') || isMPD;
     const isPrograms = path.includes('programs.html') || path.includes('/programs/');
     const isGallery = path.includes('gallery.html');
     const isBlogs = path.includes('blog.html') || path.includes('blog.php') || path.includes('post.php') || path.includes('/blogs/');
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerHTML = `
     <!-- Main Navigation Header -->
     <header class="w-full flex justify-center fixed top-0 lg:top-6 left-0 z-[100] pointer-events-none">
-        <nav class="w-full lg:max-w-[1240px] bg-white backdrop-blur-md lg:rounded-full px-5 md:px-8 py-3.5 md:py-3 flex items-center justify-between shadow-lg border-b lg:border border-black/5 pointer-events-auto">
+        <nav class="w-full lg:max-w-[1240px] bg-white backdrop-blur-md lg:rounded-full px-5 md:px-8 py-3.5 md:py-3 flex items-center justify-between border-b lg:border border-black/10 pointer-events-auto">
             <!-- Logo -->
             <a href="${base}index.html" class="flex items-center cursor-pointer shrink-0">
                 <img src="${base}logo/birla-logo-new.webp" alt="BOMIS Ballari" class="h-12 md:h-20 lg:h-24 w-auto" loading="lazy">
@@ -30,7 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Links (Desktop) -->
             <div class="hidden lg:flex items-center gap-7 mx-4">
                 <a href="${base}index.html" class="${isHome ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Home</a>
-                <a href="${base}about.html" class="${isAbout ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">About Us</a>
+                <!-- About Us Dropdown -->
+                <div class="relative group py-2">
+                    <a href="${base}about.html" class="flex items-center gap-1.5 ${isAbout ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 group-hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">
+                        About Us
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-xl border border-black/10 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="${base}mandatory-public-disclosure.html" class="flex items-center px-4 py-2.5 text-[13px] font-semibold ${isMPD ? 'text-[#c2410c]' : 'text-[#231F20]/80'} hover:bg-gray-50 hover:text-[#c2410c] transition-colors">Mandatory Public Disclosure</a>
+                    </div>
+                </div>
                 <a href="${base}programs.html" class="${isPrograms ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Programs</a>
                 <a href="${base}gallery.html" class="${isGallery ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Gallery</a>
                 <a href="${base}testimonials.html" class="${isTestimonials ? 'text-[#c2410c] font-semibold' : 'text-[#231F20]/70 hover:text-[#c2410c] font-medium'} text-[14px] transition-colors duration-200">Testimonials</a>
@@ -44,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <!-- Dropdown Menu -->
-                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-black/5 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-xl border border-black/10 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <a href="${base}parents-login.html" class="flex items-center px-4 py-2.5 text-[13px] font-semibold text-[#231F20]/80 hover:bg-gray-50 hover:text-[#c2410c] transition-colors">Parents Login</a>
                         <a href="${base}staff-login.html" class="flex items-center px-4 py-2.5 text-[13px] font-semibold text-[#231F20]/80 hover:bg-gray-50 hover:text-[#c2410c] transition-colors">Staff Login</a>
                     </div>
@@ -53,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <!-- Right Side -->
             <div class="flex items-center gap-4 shrink-0">
-                <a href="${base}contact.html" class="hidden md:flex bg-[#c2410c] hover:bg-[#9a3412] text-white font-bold text-[13px] px-6 py-2.5 rounded-full transition-all duration-300 shadow-md whitespace-nowrap">Contact Us</a>
+                <a href="${base}contact.html" class="hidden md:flex bg-[#c2410c] hover:bg-[#9a3412] text-white font-bold text-[13px] px-6 py-2.5 rounded-full transition-all duration-300 whitespace-nowrap">Contact Us</a>
                 
                 <!-- Hamburger Button -->
                 <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none z-[200] relative">
@@ -67,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md z-[150] opacity-0 pointer-events-none transition-all duration-300">
-        <div id="mobile-menu-content" class="absolute right-0 top-0 h-full w-[85%] max-w-[360px] bg-white shadow-2xl flex flex-col p-8 pt-12 translate-x-full transition-transform duration-500 ease-in-out rounded-l-[32px]">
+        <div id="mobile-menu-content" class="absolute right-0 top-0 h-full w-[85%] max-w-[360px] bg-white flex flex-col p-8 pt-12 translate-x-full transition-transform duration-500 ease-in-out rounded-l-[32px]">
             <!-- Header inside menu -->
             <div class="flex justify-center items-center mb-10">
                 <img src="${base}logo/birla-logo-new.webp" alt="Logo" class="h-28 w-auto" loading="lazy">
@@ -80,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <nav class="flex flex-col gap-1 overflow-y-auto pb-10 custom-scrollbar">
                 <a href="${base}index.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isHome ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Home</a>
                 <a href="${base}about.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isAbout ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">About Us</a>
+                <a href="${base}mandatory-public-disclosure.html" class="flex items-center py-3 pl-5 border-b border-gray-50 ${isMPD ? 'text-[#c2410c] font-bold' : 'text-[#231F20]/80 font-medium'} text-[15px]">Mandatory Public Disclosure</a>
                 <a href="${base}programs.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isPrograms ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Programs</a>
                 <a href="${base}gallery.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isGallery ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Gallery</a>
                 <a href="${base}testimonials.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isTestimonials ? 'text-[#c2410c] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Testimonials</a>
@@ -164,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = placeholder.querySelector('nav');
     function handleScroll() {
         if (window.scrollY > 20) {
-            nav.classList.add('shadow-xl', 'border-black/10');
-            nav.classList.remove('shadow-lg', 'border-black/5');
+            nav.classList.add('border-black/20');
+            nav.classList.remove('border-black/10');
         } else {
-            nav.classList.add('shadow-lg', 'border-black/5');
-            nav.classList.remove('shadow-xl', 'border-black/10');
+            nav.classList.add('border-black/10');
+            nav.classList.remove('border-black/20');
         }
     }
     window.addEventListener('scroll', handleScroll);
